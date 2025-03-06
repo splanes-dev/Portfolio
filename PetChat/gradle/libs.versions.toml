@@ -6,7 +6,8 @@ kotlin = "2.1.10"
 # Koin
 koin = "4.0.0-RC2"
 
-coreKtx = "1.15.0"
+androidxCoreKtx = "1.15.0"
+androidxNavigation = "2.8.8"
 appcompat = "1.7.0"
 material = "1.12.0"
 
@@ -23,7 +24,9 @@ composeCompiler = "2.1.20-RC"
 
 [libraries]
 # Android
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
+androidx-navigation-navigationCompose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "androidxNavigation" }
 
 # Koin
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
@@ -61,4 +64,6 @@ androidx-compose = [
     "androidx-compose-material3",
     "androidx-compose-activity",
     "androidx-compose-materialIconsExtended",
+    "androidx-navigation-navigationCompose",
+    "androidx-navigation-runtime-ktx",
 ]
