@@ -9,9 +9,7 @@ import com.splanes.apps.petchat.presentation.R
 
 private val baseline = Typography()
 private val displayFontFamily: FontFamily = FontFamily(
-  Font(resId = R.font.apercu_pro_regular),
-  Font(resId = R.font.apercu_pro_bold, weight = FontWeight.Bold),
-  Font(resId = R.font.apercu_pro_light, weight = FontWeight.Light)
+  Font(resId = R.font.poiret_one_regular),
 )
 private val bodyFontFamily: FontFamily = FontFamily(
   Font(resId = R.font.product_sans_regular),
