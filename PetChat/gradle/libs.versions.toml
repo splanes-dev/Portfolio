@@ -3,6 +3,7 @@
 agp = "8.9.0"
 # Kotlin
 kotlin = "2.1.10"
+kotlinxSerialization = "1.7.3"
 # Koin
 koin = "4.0.0-RC2"
 
@@ -23,6 +24,10 @@ composeActivity = "1.10.1"
 composeCompiler = "2.1.20-RC"
 
 [libraries]
+# Kotlin
+kotlinx-serialization-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "kotlinxSerialization" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
 # Android
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtx" }
 androidx-navigation-navigationCompose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
@@ -49,12 +54,6 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-[plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "agp" }
-android-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "composeCompiler" }
-
 [bundles]
 androidx-compose = [
     "androidx-compose-ui",
@@ -67,3 +66,10 @@ androidx-compose = [
     "androidx-navigation-navigationCompose",
     "androidx-navigation-runtime-ktx",
 ]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "composeCompiler" }

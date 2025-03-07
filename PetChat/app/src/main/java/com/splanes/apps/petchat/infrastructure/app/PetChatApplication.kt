@@ -2,6 +2,7 @@ package com.splanes.apps.petchat.infrastructure.app
 
 import android.app.Application
 import com.splanes.apps.petchat.BuildConfig
+import com.splanes.apps.petchat.presentation.infrastructure.di.PresentationModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -27,6 +28,6 @@ class PetChatApplication : Application() {
   }
 
   private fun koinModules(): List<Module> = listOf(
-
-  )
+    PresentationModules
+  ).flatten()
 }
